@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<meta charset="utf-8" />
+		<title>Little Ben</title>
+		<script src="jqtouch/jquery-1.4.2.min.js"></script>
+		<script src="javascripts/raphael-min.js"></script>
+		<script src="jqtouch/jqtouch.js"></script>
+		<script src="mobile.js"></script>
+		<link rel="stylesheet" href="jqtouch/jqtouch.css">
+		<link rel="stylesheet" href="themes/apple/theme.css">
+		<link rel="stylesheet" href="mobile.css">
+	</head>
+	<body>
+		
+		<!-- 
+			small
+			shows right aligned in the cell
+			
+			small.counter
+			inset within an oval
+		-->
+		
+		<div id="home" class="">
+			
+			<div class="toolbar">
+				<a class="button slideup" href="#settings">Settings</a>
+				<h1>Little Ben</h1>
+				<!-- .button: .back .cancel .add -->
+			</div>
+			
+			<div class="info">Info</div>
+			
+			<ul>
+				<li class="arrow">
+					<a href="#sign_in">Sign in</a>
+				</li>
+				<li class="arrow">
+					<a href="#sign_up">Sign up</a>
+				</li>
+			</ul>
+
+<!--
+			<ol class="sort_buttons">
+				<li class="selected">
+					<a href="#">button</a>
+				</li>
+				<li class="second">
+					<a href="#">button</a>
+				</li>
+				<li class="last">
+					<a href="#">button</a>
+				</li>
+			</ol>
+-->		
+			
+		</div>
+
+		
+		
+		
+		<div id="about">
+			<div class="toolbar">
+				<h1>About</h1>
+				<a class="back">Back</a>
+			</div>
+			
+		</div>
+		
+		<form id="sign_in" action="/sessions" method="post">
+			<div class="toolbar">
+				<h1>Sign In with your email</h1>
+			</div>
+			<ul class="rounded">
+				<li> 
+					<input type="email" placeholder="e.g. member@parliament.uk" />
+				</li>
+				<li> 
+					<input type="password" placeholder="Password" />
+				</li>
+			</ul>
+			<a href="#" class="whiteButton submit login">Login</a>
+			<a href="#" class="grayButton goback">Cancel</a>
+			
+		</form>
+		
+		<div id="bill_list" class="current">
+			<div class="toolbar">
+				<h1>Bills</h1>
+				<a href="#" class="button filter">Sort</a>
+			</div>
+			<div class="bill_filter" style="display: none;">
+				<form>
+					<ul class="metal">
+						<li>
+							<div>
+								<h4>Highlight bills of interest</h4>
+								<span class="toggle"><input type="checkbox" checked/></span>
+							</div>
+						</li>
+					</ul>
+				</form>
+				
+			</div>
+			
+			<!-- <ul class="individual">
+							<li><a href="#">Today's bills only</a></li>
+							<li><a href="#">Filter</a></li>
+						</ul> -->
+			
+			<ul>
+			<li class="arrow stage1">
+				<a href="#adoption_example">
+					<h4>Adoption (Leave, Pay and Allowance Arrangements) Bill 2010-11</h4>
+					<small>Today</small>
+					
+				</a>
+			</li>
+			<li class="interested arrow stage1">
+				<a href="#">
+					<h4>Academies Bill [HL]</h4> 	
+					<small>Today</small>
+				</a>
+			</li>
+			
+			<li class="arrow stage2">
+				<a href="#">
+					<h4>Alcohol Marketing Bill</h4> 	
+					<small>Tuesday</small>
+				</a>
+			</li>
+			
+			<li class="arrow stage3">
+				<a href="#">
+					<h4>Energy Bill [HL]</h4> 	
+					<small>Nov 25</small>
+				</a>
+			</li>
+			
+			<li class="arrow stage2">
+				<a href="#">
+					<h4>Alcohol Marketing Bill</h4> 	
+					<small>Nov 28</small>
+				</a>
+			</li>
+			
+			<li class="arrow stage3">
+				<a href="#">
+					<h4>Energy Bill [HL]</h4> 	
+					<small>Dec</small>
+				</a>
+			</li>
+			
+			<li class="arrow stage2">
+				<a href="#">
+					<h4>Alcohol Marketing Bill</h4> 	
+					<small>2012</small>
+				</a>
+			</li>
+			
+			<li class="arrow stage3">
+				<a href="#">
+					<h4>Energy Bill [HL]</h4> 	
+					<small>Upcoming</small>
+				</a>
+			</li>
+			
+		
+			
+			</ul>
+		</div>
+		
+		<div id="adoption_example" class="bill_detail">
+			<div class="toolbar">
+				<h1>Division</h1>
+				<a href="#" class="button back">Back</a>
+				
+				
+			</div>
+			<ul class="vote individual">
+				<li class="yay ">
+					<a class="greenButton" href="#">Yay</a>
+				</li>
+				<li class="nay ">
+					<a class="redButton" href="#">Nay</a>
+				</li>
+			</ul>
+			
+			<ul>
+				<li class="text">
+					<h1>Adoption (Leave, Pay and Allowance Arrangements) Bill 2010-11 <small class="stage2">Stage 2</small></h1>
+					
+					<p>A Bill to make provision to equalise leave, pay and allowance arrangements for adoptive parents with those of parents whose children are born to them; to equalise eligibility for adoption leave and pay with that of maternity leave and pay; to equalise the rates of pay for the first six weeks of maternity leave and adoption leave; to equalise the entitlement to allowances for self-employed adopters and self-employed mothers; and for connected purposes</p>
+					
+				</li>
+			</ul>
+			
+			<form classaction="">
+			
+			<ul class="bill_actions">
+				<li>
+					Alert me <span class="toggle"><input type="checkbox" checked/></span>
+				</li>
+			</ul>
+			</form>
+			
+			<ul class="vote individual">
+				<li class="yay ">
+					<a class="greenButton" href="#">Yay</a>
+				</li>
+				<li class="nay ">
+					<a class="redButton" href="#">Nay</a>
+				</li>
+			</ul>
+			
+		</div>
+		
+		<div id="sign_up">
+			<h1>Sign up</h1>
+		</div>
+		
+		
+		<div id="topics"><!-- EXAMPLE -->
+			<ul>
+				<li>Health <small>9</small></li>
+				<li>Immigration <small>4</small></li>
+				<li>Sport <small>13</small></li>
+				<li>Misc <small>6</small></li>
+			</ul>
+		</div>
+		
+		
+		<div id="colophon">
+			jQTouch
+		</div>
+		
+		<div id="settings">
+			<div class="toolbar">
+				<a class="button back">Back</a>
+				<h1>Settings</h1>
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		<div id="bill_summary">
+			<h1 class="name">Adoption (Leave, Pay and Allowance Arrangements) Bill 2010-11</h1>
+			<a href="http://services.parliament.uk/bills/2010-11/adoptionleavepayandallowancearrangements.html">View this bill on parliament.uk</a>
+			
+			<h2>Previous events</h2>
+			<ul class="rounded">
+				<li>
+					29 June 2011
+				</li>
+			</ul>
+		</div>
+
+		
+		
+	</body>
+</html>
